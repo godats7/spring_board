@@ -10,7 +10,7 @@ create table wook_board(
     constraint pk_board PRIMARY key(bno)
 );
  
-테스트자료
+테스트자료 생성 
  
 insert into wook_board(title, content, writer) values ('테스트 제목', '테스트 내용', '작가');
 insert into wook_board(title, content, writer) values ('테스트 제목', '테스트 내용', '작가');
