@@ -17,3 +17,17 @@ insert into wook_board(title, content, writer) values ('테스트 제목', '테�
 insert into wook_board(title, content, writer) values ('테스트 제목', '테스트 내용', '작가');
  
 select * from wook_board; 
+
+페이징
+
+limit방식
+select bno, title, writer, regdate, updatedate  
+from wook_board order by bno desc 
+limit 10, 10;
+
+rownum방식
+select * from 
+        (select @rownum := @rownum + 1 as rn, bno, title, writer, regdate, updatedate 
+        from wook_board, (select @rownum := 0)  as rowcolumn order by bno desc) as rownum_table  
+where rn > 10 and rn <=20;
+-- where rn between 10 and 20;
