@@ -45,6 +45,11 @@
 	</div>
 	<form id="infoForm" action="/board/modify" method="get">
 		<input type="hidden" id="bno" name="bno" value='<c:out value="${pageInfo.bno}"/>'>
+		<input type="hidden" name="pageNum" value='<c:out value="${criteria.pageNum}"/>'>
+		<input type="hidden" name="amout" value='<c:out value="${criteria.amount}"/>'>
+		<input type="hidden" name="type" value="${criteria.type }">
+		<input type="hidden" name="keyword" value="${criteria.keyword }">  
+		
 	</form>
 <script>
 	let form = $("#infoForm");
@@ -62,3 +67,4 @@
 </script>	
 </body>
 </html>
+

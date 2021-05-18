@@ -51,11 +51,12 @@ public class BoardServiceImpl implements BoardService{
 		// TODO Auto-generated method stub
 		return mapper.getListPaging(criteria);
 	}
-	
-	
-	
-	
-	
+
+	@Override
+	public int getTotal(Criteria criteria) {
+		// TODO Auto-generated method stub
+		return mapper.getTotal(criteria);
+	}
 	
 	
 	

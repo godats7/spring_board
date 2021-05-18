@@ -20,5 +20,7 @@ public interface BoardService {
 	public int delete(int bno);
 	
 	public List<BoardVO> getListPaging(Criteria criteria);
+	
+	public int getTotal(Criteria criteria);
 
 }

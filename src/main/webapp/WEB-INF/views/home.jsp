@@ -6,9 +6,10 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	<a id="goMain" class="goMain" href="/board/list">Hello world!</a>  
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
+
 </body>
 </html>

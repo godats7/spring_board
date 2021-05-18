@@ -31,3 +31,13 @@ select * from
         from wook_board, (select @rownum := 0)  as rowcolumn order by bno desc) as rownum_table  
 where rn > 10 and rn <=20;
 -- where rn between 10 and 20;
+
+
+제목으로 글검색 예
+
+select bno, title, writer, regdate, updatedate  
+    from wook_board 
+    where title like '%service%'
+    order by bno desc 
+    limit 10, 10;
+ 
